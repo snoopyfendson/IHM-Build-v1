@@ -1,0 +1,29 @@
+#menuTitle {
+    font-size: medium;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.mat-toolbar {
+    height: 60px;
+}
+
+.mat-sidenav {
+    background-color: #3F51B5;
+    width: 160px;
+}
+
+.side-nav-items {
+    display: flexbox;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.side-menu-items {
+    margin-left: 20px;
+}
+
+.side-menu-items-customer {
+    margin-right: 20px;
+    margin-left: 20px;
+}

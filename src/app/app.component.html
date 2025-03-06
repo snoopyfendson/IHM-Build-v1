@@ -4,9 +4,9 @@
     </button>
     <span id="menuTitle">IHM Build</span>
     <a mat-button routerLink="/" class="top-menu-item"><mat-icon>home</mat-icon>Home</a>
-    <a mat-button routerLink="/customer" class="top-menu-item"><mat-icon>people</mat-icon>Customer</a>
-    <a mat-button routerLink="/network" class="top-menu-item"><mat-icon>person_add</mat-icon>Network</a>
-  </mat-toolbar>
+    <a mat-button routerLink="/customer" class="material-symbols-outlined"><mat-icon>dataset</mat-icon>Customers</a>
+    <a mat-button routerLink="/network" class="material-symbols-outlined"><mat-icon>lan</mat-icon>Network</a>
+</mat-toolbar>
   
   <mat-sidenav-container>
     <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="side">
@@ -18,13 +18,12 @@
   
             <div>
                 <a (click)="sidenav.close()" mat-button routerLink="/customer"
-                    class="side-menu-item-customer"><mat-icon>people</mat-icon>Customer</a>
+                    class="side-menu-item"><mat-icon>people</mat-icon>Customer</a>
             </div>
   
             <div>
                 <a (click)="sidenav.close()" mat-button routerLink="/network"
-                    class="side-menu-item"><mat-icon>person_add</mat-icon>New
-                    Contact</a>
+                    class="side-menu-item"><mat-icon>person_add</mat-icon>Network</a>
             </div>
         </div>
   

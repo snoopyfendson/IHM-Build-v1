@@ -33,4 +33,21 @@ export class CustomerServiceService {
   getCustomers(){
     return this.customers;
   }
+
+  updateCustomer(updateCustomer: CustomerInterface){
+
+    const index = this.customers.findIndex(customer => customer.Id == updateCustomer.Id ); //Récupération de l'index du tableau "Customers"
+    //MAJ du tableau "contacts" avec le contenu du formulaire
+    this.customers[index].Site = updateCustomer.Site ;
+    this.customers[index].Environment = updateCustomer.Environment ;
+    this.customers[index].Basicat = updateCustomer.Basicat ;
+    this.customers[index].ProjectName = updateCustomer.ProjectName ;
+    this.customers[index].SwanId = updateCustomer.SwanId ;
+
+  }
+
+  deleteContact(id: number){
+    const index = this.customers.findIndex(customer => customer.Id == id );
+    this.customers.splice(index, 1);     //Supprime le customer avec l'index correspondant
+  }
 }

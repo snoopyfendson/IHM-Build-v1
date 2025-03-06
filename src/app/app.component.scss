@@ -2,10 +2,15 @@
     font-size: medium;
     margin-right: 20px;
     margin-left: 30px;
+    color: white;
+
 }
 
 .mat-toolbar {
     height: 60px;
+    font-size: medium;
+    background-color: #3F51B5;
+    
 }
 
 .mat-sidenav {
@@ -13,17 +18,33 @@
     width: 160px;
 }
 
-.side-nav-items {
-    display: flexbox;
-    flex-direction: column;
-    margin-left: 20px;
+.side-menu-item {
+    color: white !important;
+    margin-top: 20px;
 }
 
-.side-menu-items {
-    margin-left: 20px;
+.side-nav-item {
+    color: white !important;
+    margin-top: 20px;
 }
 
-.side-menu-items-customer {
-    margin-right: 20px;
-    margin-left: 20px;
+
+.main-content {
+    margin: 20px;
+}
+
+@media (min-width: 900px) {
+    #menuIcon {
+        display: none;
+    }
+
+    .mat-sidenav {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .top-menu-item {
+        display: none;
+    }
 }

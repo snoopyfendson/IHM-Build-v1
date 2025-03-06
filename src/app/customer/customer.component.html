@@ -27,6 +27,21 @@
         <th mat-header-cell *matHeaderCellDef> SwanId </th>
         <td mat-cell *matCellDef="let customer"> {{customer.SwanId}} </td>
     </ng-container>
+    <!--Définition de la colonne "Update"-->
+    <ng-container matColumnDef="Update">
+        <th mat-header-cell *matHeaderCellDef> Update </th>
+        <td mat-cell *matCellDef="let customer"> 
+            <button mat-raised-button color="primary" (click)="onUpdate(customer)">Update</button>
+        </td>
+    </ng-container>
+
+    <!--Définition de la colonne "Delete"-->
+    <ng-container matColumnDef="Delete">
+        <th mat-header-cell *matHeaderCellDef> Delete </th>
+        <td mat-cell *matCellDef="let customer"> 
+            <button mat-raised-button color="warn" (click)="onDelete(customer)">Delete</button>
+        </td>
+    </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>

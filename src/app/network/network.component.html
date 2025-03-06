@@ -1,1 +1,50 @@
-<p>network works!</p>
+<h1>Networks</h1>
+
+<!--Définition du tableau-->
+<table mat-table [dataSource]="dataSource">
+    <!--Définition de la colonne "NetworkName"-->
+    <ng-container matColumnDef="NetworkName">
+        <th mat-header-cell *matHeaderCellDef> Network Name </th>
+        <td mat-cell *matCellDef="let network"> {{network.NetworkName}} </td>
+      </ng-container>
+    <!--Définition de la colonne "NetworkId"-->
+    <ng-container matColumnDef="NetworkId">
+        <th mat-header-cell *matHeaderCellDef> Network Id   </th>
+        <td mat-cell *matCellDef="let network"> {{network.NetworkId}} </td>
+    </ng-container>    
+    <!--Définition de la colonne "Basicat"-->
+    <ng-container matColumnDef="Basicat">
+        <th mat-header-cell *matHeaderCellDef> Basicat</th>
+        <td mat-cell *matCellDef="let network"> {{network.Basicat}} </td>
+    </ng-container>
+    <!--Définition de la colonne "ProjectName"-->
+    <ng-container matColumnDef="ProjectName">
+        <th mat-header-cell *matHeaderCellDef> ProjectName </th>
+        <td mat-cell *matCellDef="let network"> {{network.ProjectName}} </td>
+    </ng-container>
+    <!--Définition de la colonne "SwanId"-->
+        <ng-container matColumnDef="SwanId">
+        <th mat-header-cell *matHeaderCellDef> SwanId </th>
+        <td mat-cell *matCellDef="let network"> {{network.SwanId}} </td>
+    </ng-container>
+    <!--Définition de la colonne "Update"-->
+    <ng-container matColumnDef="Update">
+        <th mat-header-cell *matHeaderCellDef> Update </th>
+        <td mat-cell *matCellDef="let network"> 
+            <button mat-raised-button color="primary" (click)="onUpdate(network)">Update</button>
+        </td>
+    </ng-container>
+
+    <!--Définition de la colonne "Delete"-->
+    <ng-container matColumnDef="Delete">
+        <th mat-header-cell *matHeaderCellDef> Delete </th>
+        <td mat-cell *matCellDef="let network"> 
+            <button mat-raised-button color="warn" (click)="onDelete(network)">Delete</button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+
+</table>

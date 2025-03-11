@@ -1,0 +1,62 @@
+<div id="addVmForm">
+    <form [formGroup]="addVmformGroup" (ngSubmit)="onSubmit()" class="addVmForm">
+    
+        <h1 id="AddVmTitle">Add VM</h1>
+                  <div class="inputAddVmForm">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Project Name</mat-label>
+                            <input matInput formControlName="projectName">
+                        </mat-form-field>
+                        
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Basicat</mat-label>
+                            <mat-select></mat-select>
+                            </mat-form-field>
+                        
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Hostname</mat-label>
+                            <input matInput formControlName="hostname">
+                        </mat-form-field>
+                        
+                        <mat-form-field class="example-full-width">
+                            <mat-label>OS</mat-label>
+                            <mat-select></mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>CPU</mat-label>
+                            <input matInput formControlName="cpu">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>RAM</mat-label>
+                            <input matInput formControlName="ram">
+                        </mat-form-field>
+                        
+                        <mat-form-field class="example-full-width">
+                            <mat-label>vDisk1</mat-label>
+                            <input matInput formControlName="vdisk1">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>vDisk2</mat-label>
+                            <input matInput formControlName="vdisk2">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>NetworkCard</mat-label>
+                            <input matInput formControlName="networkCard">
+                        </mat-form-field>
+
+                    </div>
+
+                 
+                <!-- La propriété "mat-dialog-close" permet de pouvoir clore la boite de dialogue en cliquant sur le bouton sans besoin de méthode "onCancel()"-->
+                <button mat-raised-button class="actionButtons" type="button" mat-dialog-close color="warn">Cancel</button>                            
+                <button mat-raised-button class="actionButtons" [disabled]="addVmformGroup.invalid" type="submit" color="primary">Add Vm</button>
+
+    </form>
+</div>  
+
+
+

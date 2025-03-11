@@ -1,7 +1,7 @@
 <h1>Customers</h1>
 
 <!--Définition du tableau-->
-<table mat-table [dataSource]="dataSource">
+<table mat-table id="CustomerTable" [dataSource]="dataSource">
     <!--Définition de la colonne "Site"-->
     <ng-container matColumnDef="Site">
         <th mat-header-cell *matHeaderCellDef> Site </th>
@@ -46,7 +46,13 @@
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
 
-
+    
 </table>
 
+<mat-card>
+   <mat-card-actions align="end">
+         <button mat-raised-button class="actionButtons" type="button" color="primary" (click)="onCreate()">Create</button>
+        
+    </mat-card-actions>
 
+</mat-card>

@@ -18,9 +18,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 
 import { UpdateCustomerDialogComponent } from './dialogs/update-customer-dialog/update-customer-dialog.component';
 import { DeleteCustomerDialogComponent } from './dialogs/delete-customer-dialog/delete-customer-dialog.component';
+import { CreateCustomerDialogComponent } from './dialogs/create-customer-dialog/create-customer-dialog.component';
+import { VMComponent } from './vm/vm.component';
+import { AddVmDialogComponent } from './dialogs/add-vm-dialog/add-vm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,10 @@ import { DeleteCustomerDialogComponent } from './dialogs/delete-customer-dialog/
     NetworkComponent,
     HomeComponent,
     UpdateCustomerDialogComponent,
-    DeleteCustomerDialogComponent
+    DeleteCustomerDialogComponent,
+    CreateCustomerDialogComponent,
+    VMComponent,
+    AddVmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,11 @@ import { DeleteCustomerDialogComponent } from './dialogs/delete-customer-dialog/
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatSelectModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

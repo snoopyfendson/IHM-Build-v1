@@ -1,0 +1,65 @@
+<h1>VMs</h1>
+
+<!--Définition du tableau-->
+<table mat-table id="VmTable" [dataSource]="dataSource">
+    <!--Définition de la colonne "Hostname"-->
+    <ng-container matColumnDef="Hostname">
+        <th mat-header-cell *matHeaderCellDef> Hostname </th>
+        <td mat-cell *matCellDef="let vm"> {{vm.Hostname}} </td>
+    </ng-container>
+    <!--Définition de la colonne "ProjectName"-->
+    <ng-container matColumnDef="ProjectName">
+            <th mat-header-cell *matHeaderCellDef> ProjectName </th>
+        <td mat-cell *matCellDef="let vm"> {{vm.ProjectName}} </td>
+    </ng-container>
+    <!--Définition de la colonne "Basicat"-->
+    <ng-container matColumnDef="Basicat">
+        <th mat-header-cell *matHeaderCellDef> Basicat </th>
+    <td mat-cell *matCellDef="let vm"> {{vm.Basicat}} </td>
+    </ng-container>
+    <!--Définition de la colonne "OS"-->
+    <ng-container matColumnDef="OS">
+        <th mat-header-cell *matHeaderCellDef> OS </th>
+        <td mat-cell *matCellDef="let vm"> {{vm.OS}} </td>
+      </ng-container>
+    <!--Définition de la colonne "CPU"-->
+    <ng-container matColumnDef="CPU">
+        <th mat-header-cell *matHeaderCellDef> CPU </th>
+        <td mat-cell *matCellDef="let vm"> {{vm.CPU}} </td>
+    </ng-container>    
+    <!--Définition de la colonne "RAM"-->
+    <ng-container matColumnDef="RAM">
+        <th mat-header-cell *matHeaderCellDef> RAM</th>
+        <td mat-cell *matCellDef="let vm"> {{vm.RAM}} </td>
+    </ng-container>
+    <!--Définition de la colonne "vDisk1"-->
+    <ng-container matColumnDef="vDisk1">
+        <th mat-header-cell *matHeaderCellDef> vDisk1 </th>
+        <td mat-cell *matCellDef="let vm"> {{vm.vDisk1}} </td>
+    </ng-container>
+    <!--Définition de la colonne "vDisk2"-->
+        <ng-container matColumnDef="vDisk2">
+        <th mat-header-cell *matHeaderCellDef> vDisk2 </th>
+        <td mat-cell *matCellDef="let vm"> {{vm.vDisk2}} </td>
+    </ng-container>
+    <!--Définition de la colonne "NetworkCard"-->
+    <ng-container matColumnDef="NetworkCard">
+        <th mat-header-cell *matHeaderCellDef> NetworkCard </th>
+        <td mat-cell *matCellDef="let vm"> {{vm.NetworkCard}} </td>         
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+    
+</table>
+
+<mat-card>
+    <mat-card-actions align="end">
+          <button mat-raised-button class="actionButtons" type="button" color="primary" (click)="onAddVm()">Add Vm</button>
+         
+     </mat-card-actions>
+ 
+ </mat-card>
+
+
+

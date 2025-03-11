@@ -46,8 +46,29 @@ export class CustomerServiceService {
 
   }
 
-  deleteContact(id: number){
+  deleteCustomer(id: number){
     const index = this.customers.findIndex(customer => customer.Id == id );
     this.customers.splice(index, 1);     //Supprime le customer avec l'index correspondant
+  }
+
+  createCustomer(newCustomer: CustomerInterface){
+    
+    //finding the highest Id
+    let highestId = 0;
+    this.customers.forEach(customerObject => {
+      if (customerObject.Id > highestId)
+        highestId = customerObject.Id ;
+    })  
+    
+    //Adding new contact
+    this.customers.push({
+      Id: highestId+1,
+      Site: newCustomer.Site,
+      Environment: newCustomer.Environment,
+      Basicat: newCustomer.Basicat,
+      ProjectName: newCustomer.ProjectName,
+      SwanId: newCustomer.SwanId,
+
+    })
   }
 }

@@ -2,6 +2,6 @@ export interface NetworkInterface {
     Id: number;
     NetworkName: string,
     NetworkId: number,
-    NetwordAddress: string,
+    NetworkAddress: string,
     NetworkGateway: string                      
 }

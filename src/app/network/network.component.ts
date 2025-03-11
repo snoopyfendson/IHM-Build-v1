@@ -15,7 +15,7 @@ export class NetworkComponent implements OnInit {
   
     dataSource = new MatTableDataSource<NetworkInterface>(); //Création d'une source de données
     
-    columnsToDisplay = ['Site', 'Environment', 'Basicat', 'ProjectName', 'SwanId', 'Update', 'Delete'];
+    columnsToDisplay = ['NetworkName', 'NetworkId', 'NetworkAddress', 'NetworkGateway', 'Update', 'Delete'];
     constructor(private networkService: NetworkServiceService){
   
     }

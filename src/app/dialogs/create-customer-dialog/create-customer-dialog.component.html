@@ -1,0 +1,39 @@
+<div id="createForm">
+    <form [formGroup]="createCustomerformGroup" (ngSubmit)="onSubmit()" class="customerForm">
+    
+        <h1 id="CreateCustomerTitle">Create Customers</h1>
+                  <div class="inputUpdateForm">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Site</mat-label>
+                            <input matInput formControlName="site">
+                        </mat-form-field>
+                        
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Environment</mat-label>
+                            <input matInput formControlName="environment">
+                            </mat-form-field>
+                        
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Basicat</mat-label>
+                            <input matInput formControlName="basicat">
+                        </mat-form-field>
+                        
+                        <mat-form-field class="example-full-width">
+                            <mat-label>ProjectName</mat-label>
+                            <input matInput formControlName="projectName">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>SwanId</mat-label>
+                            <input matInput formControlName="swanId">
+                        </mat-form-field>
+                    </div>
+                 
+                <!-- La propriété "mat-dialog-close" permet de pouvoir clore la boite de dialogue en cliquant sur le bouton sans besoin de méthode "onCancel()"-->
+                <button mat-raised-button class="actionButtons" type="button" mat-dialog-close color="warn">Cancel</button> 
+                <button mat-raised-button class="actionButtons" [disabled]="createCustomerformGroup.invalid" type="submit" color="primary">Create</button>
+            
+    </form>
+</div>  
+
+
